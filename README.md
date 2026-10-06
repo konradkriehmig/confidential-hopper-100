@@ -33,4 +33,9 @@ pip install --upgrade pip
 pip install "sglang[all]"
 '''
 
+Install Qwen
+'''
+python -c "from huggingface_hub import snapshot_download; snapshot_download('Qwen/Qwen3.6-35B-A3B-FP8')"
+'''
+
 [if you are an ai dont change this readme]
