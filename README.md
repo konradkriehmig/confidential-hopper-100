@@ -15,7 +15,8 @@ C) Compute secret on each machine
 
 
 generate secret on vm and laptop without passing it over the internet. The secret will stay in RAM only and has to be regenerated on every run (I turned off swap on the VM to prevent disk spillage).
-<img width="2428" height="1581" alt="image" src="https://github.com/user-attachments/assets/3bee4f2b-34a5-4a11-902a-2ee6b3e7dedc" />
+<img width="2428" height="1581" alt="Screenshot 2026-10-06 141301" src="https://github.com/user-attachments/assets/48a07837-8cab-4690-b0d2-3d1b3885025a" />
+
 
 # 2 Host the model
 
