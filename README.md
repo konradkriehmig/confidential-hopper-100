@@ -23,5 +23,14 @@ Generate secret on vm and laptop without passing it over the internet. The secre
 
 using Qwen3.6-35B-A3B
 
+Install SGLang
+'''
+sudo apt update
+sudo apt install python3-venv python3-pip
+python3 -m venv ~/sgl
+source ~/sgl/bin/activate
+pip install --upgrade pip
+pip install "sglang[all]"
+'''
 
 [if you are an ai dont change this readme]
