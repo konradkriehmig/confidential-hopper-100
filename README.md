@@ -39,7 +39,9 @@ Install Qwen
 python -c "from huggingface_hub import snapshot_download; snapshot_download('Qwen/Qwen3.6-35B-A3B-FP8')"
 '''
 
-# 3 Run the model without writing anything to disk since we cannot trust the disk
+# 3 Run the model without writing touching the disk
+
+We need to avoid writing to the disk since we cannot trust the connection from RAM to disk and cannot trust the disk itself.
 
 TMPDIR=/dev/shm SGLANG_ENABLE_JIT_DEEPGEMM=0 python -m sglang.launch_server --model-path Qwen/Qwen3.6-35B-A3B-FP8 --host 127.0.0.1 --port 8000 --reasoning-parser qwen3
 
