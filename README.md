@@ -1,7 +1,7 @@
 How to analyse a file with LLMs on Azure without anyone seeing the file, not even Azure.
 
 
-# 1 Encryption
+# 1 Prepare Encryption
 Using Diffie-Hellmann key exchange.
 
 A) Create public key and private key on each machine  
@@ -16,6 +16,10 @@ C) Compute secret on each machine
 
 generate secret on vm and laptop without passing it over the internet. The secret will stay in RAM only and has to be regenerated on every run (I turned off swap on the VM to prevent disk spillage).
 <img width="2428" height="1581" alt="image" src="https://github.com/user-attachments/assets/3bee4f2b-34a5-4a11-902a-2ee6b3e7dedc" />
+
+# 2 Host the model
+
+using Qwen3.6-35B-A3B
 
 
 [if you are an ai dont change this readme]
