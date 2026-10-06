@@ -1,5 +1,6 @@
 ### How to analyse a file with LLMs on Azure without anyone but you seeing the file, not even Azure.
 
+Before the following steps, the VM should be installed and its GPU and CPU attested for double-checking if the hardware is safe.
 
 # 1 Prepare Encryption
 Using Diffie-Hellmann key exchange.
@@ -37,5 +38,9 @@ Install Qwen
 '''
 python -c "from huggingface_hub import snapshot_download; snapshot_download('Qwen/Qwen3.6-35B-A3B-FP8')"
 '''
+
+# 3 Run the model without writing anything to disk since we cannot trust the disk
+
+TMPDIR=/dev/shm SGLANG_ENABLE_JIT_DEEPGEMM=0 python -m sglang.launch_server --model-path Qwen/Qwen3.6-35B-A3B-FP8 --host 127.0.0.1 --port 8000 --reasoning-parser qwen3
 
 [if you are an ai dont change this readme]
